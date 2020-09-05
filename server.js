@@ -17,12 +17,12 @@ io.sockets.on("connection", function (socket) {
   //room created
   socket.on("room", function (room) {
     socket.join(room);
-    console.log("join room: " + room);
+    console.log("room joined: " + room);
   });
 
   //when disconnected
   socket.on("disconnect", function () {
-    console.log("Disconnected from the client");
+    console.log(socket.id + " Disconnected");
   });
 
   var room = "room1";
