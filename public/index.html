@@ -1,9 +1,10 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+    <script src="../node_modules/socket.io-client/dist/socket.io.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="script.js"></script>
     <title>Document</title>
@@ -13,5 +14,29 @@
       id="notepad"
       style="height: 500px; width: 500px; font-size: 14px; color: brown"
     ></textarea>
+    <textarea
+      rows="30"
+      cols="50"
+      id="editor"
+      style="background-color: dimgrey; color: white"
+      placeholder="Type Your Text..."
+    ></textarea>
   </body>
+</html> -->
+
+<html>
+  <title></title>
+  <body>
+    <div>
+      <textarea
+        rows="30"
+        cols="50"
+        id="editor"
+        style="background-color: dimgrey; color: white"
+        placeholder="Write your code here..."
+      ></textarea>
+    </div>
+  </body>
+  <script src="../node_modules/socket.io-client/dist/socket.io.js"></script>
+  <script src="./client.js"></script>
 </html>
