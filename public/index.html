@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <textarea
+      id="notepad"
+      style="height: 500px; width: 500px; font-size: 14px; color: brown"
+    ></textarea>
+
+    <script>
+      $(function () {
+        var socket = io.connect("http://localhost:4444", {
+          "sync disconnect on unload": false,
+        });
+
+        var room = "room1";
+        socket.on("connect", function () {
+          socket.emit("room", room);
+        });
+
+        //recieve character from server
+        socket.on("server_character", function (content) {
+          console.log("From server: " + content);
+          document.getElementById("notepad").innerHTML = content;
+        });
+
+        //For each typed character
+        $("#notepad").on("keyup", function () {
+          var character = $("#notepad").val();
+
+          //send characters to server
+          socket.emit("client_character", { buffer: character });
+          console.log("To server: ", { buffer: character });
+        });
+      });
+    </script>
+  </body>
+</html>
