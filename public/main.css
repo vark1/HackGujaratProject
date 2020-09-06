@@ -1,3 +1,31 @@
+.section {
+  position: relative;
+  display: flex;
+  border: 1px solid black;
+  height: 100vh;
+  width: 100%;
+  background-color: yellow;
+}
+.navbar {
+  position: relative;
+  display: flex;
+  border: 1px solid black;
+  /* background-color: black; */
+  height: 200%;
+}
+.desc {
+  position: relative;
+  display: flex;
+  border: 1px solid black;
+  width: 60%;
+}
+.img {
+  position: relative;
+  display: flex;
+  border: 1px solid black;
+  width: 40%;
+}
+
 video {
   transform: rotateY(180deg);
 }
@@ -56,4 +84,116 @@ video {
   top: 2%;
   left: 2%;
   color: white;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: Montserrat, sans-serif;
+}
+
+/************************* navbar  ****************************/
+.navbar {
+  /* background-color: black; */
+  /* opacity: 0.75; */
+  z-index: 10;
+  /* border: solid 2px black; */
+  position: relative;
+  height: 10vh;
+  display: flex;
+  /* background-color: #08192b; */
+  background-color: #131212;
+}
+.navigation {
+  position: absolute;
+  right: 0;
+  display: flex;
+  font-family: "Bree Serif", serif;
+}
+.logo {
+  /* border: solid 1px white; */
+  display: flex;
+}
+.logoimg {
+  height: 100%;
+  /* border: solid 1px white; */
+}
+.logonamenavbar {
+  height: 80%;
+  border: solid 1px white;
+  color: white;
+  font-size: 20px;
+  margin-top: 1%;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  padding: 0% 1%;
+  width: 150%;
+}
+.navigation li,
+.logo li {
+  list-style: none;
+  margin: 16px 23px;
+  z-index: 1;
+}
+.navigation li a,
+.logo li a {
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  padding: 7px;
+}
+.navigation li a:hover {
+  color: black;
+  background-color: white;
+  border-radius: 10px;
+}
+
+/************* home ***********/
+
+.home {
+  background: url("./assets/bg4.jpg") no-repeat center/cover;
+  background-color: black;
+  z-index: 1;
+  /* border: solid 2px black; */
+  position: relative;
+  /* opacity: 0.4; */
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-content {
+  /* border: solid 1px white; */
+  height: 80%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+.home p {
+  /* border: solid 1px white; */
+  color: white;
+  margin: 2% 5%;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.h-primary {
+  /* border: solid 1px white; */
+  /* font-family: "Bree Serif", serif; */
+  font-size: 3.8rem;
+  text-align: center;
+  margin-top: 10%;
+  color: white;
+}
+
+.doodle {
+  position: relative;
+  background-color: #f8f6f5;
+  /* border: solid 1px black; */
+  height: 20vh;
+  display: flex;
+  margin-top: 1%;
 }

@@ -1,61 +1,28 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-  <title>Video Chat App</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <link href="main.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css">
 </head>
 
 <body>
-  <div class="container-fluid">
-    <div class="col">
-      <div class="float-right mt-3">
-        <input class="form-check-input" type="checkbox" id="theme">
-        <label class="form-check-label" for="theme">
-          Dark Theme
-        </label>
-      </div>
+
+    <div class="navbar">
+        <div class="logo">
+            <img class="logoimg item" src="../assets/hashlogo2.png" alt="">
+            <h1 class="logonamenavbar">NameSite</h1>
+        </div>
     </div>
-  </div>
-
-  <iframe class="editor" height="400px" width="100%" src="https://repl.it/repls/CultivatedBrownVariables?lite=true"
-    scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true"
-    sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-
-  <div class="vediocontainer">
-    <div class="row1">
-      <div>
-        <select id="filter" class="w-100 bg-dark text-light select font-weight-bold border">
-          <option value="none">Normal</option>
-          <option value="grayscale(100%)">B & W</option>
-          <option value="sepia(100%)">Old School</option>
-          <option value="contrast(150%)">Lumination</option>
-          <option value="blur(20px)">Hidden Mist</option>
-          <option value="invert(100%)">Dracula</option>
-          <option value="hue-rotate(180deg">X-men Beast</option>
-          <option value="saturate(25)">Super Saiyan God</option>
-        </select>
-      </div>
+    <div class="home">
+        <div class="home-content">
+            <h1 class="h-primary ">Product desc here</h1>
+            <p>some lines here</p>
+            <button><a href="./mainpage.html">Start Here</a></button>
+        </div>
     </div>
-    <div class="vediodiv">
-      <div class="embed-responsive embed-responsive-16by9 vediop">
-        <video class="embed-responsive-item" muted></video>
-      </div>
-    </div>
-    <div class="vediodiv">
-      <div id="peerDiv" class="embed-responsive embed-responsive-16by9 vediop">
-      </div>
-    </div>
-  </div>
-
-
-
-
-  </div>
-
-  <script src="/socket.io/socket.io.js"></script>
-  <script src="bundle.js"></script>
 </body>
 
 </html>
