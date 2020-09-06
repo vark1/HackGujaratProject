@@ -1,30 +1,40 @@
-const log = console.log;
-// initialize http server, socket.io and port number
 const express = require("express");
 const app = express();
-const http = require("http").createServer(app);
+const http = require("http").Server(app);
 const io = require("socket.io")(http);
-
-// app.use(express.static(__dirname + "/public"));
-
-// const express = require("express");
-// const app = express();
-// const http = require("http").Server(app);
-// const io = require("socket.io")(http);
 const port = process.env.PORT || 3000;
 
 app.use(express.static(__dirname + "/public"));
 
-io.on("connection", (socket) => {
-  log("connected");
-  socket.on("message", (evt) => {
-    log(evt);
-    socket.broadcast.emit("message", evt);
+let clients = 0;
+const log = console.log;
+io.on("connection", function (socket) {
+  socket.on("NewClient", function () {
+    if (clients < 2) {
+      if (clients == 1) {
+        this.emit("CreatePeer");
+      }
+    } else this.emit("SessionActive");
+    clients++;
   });
-});
-io.on("disconnect", (evt) => {
-  log("some people left");
+  socket.on("Offer", SendOffer);
+  socket.on("Answer", SendAnswer);
+  socket.on("disconnect", Disconnect);
 });
 
-// const port = 3000;
-http.listen(port, () => log(`server started on: http://localhost:${port}`));
+function Disconnect() {
+  if (clients > 0) {
+    if (clients <= 2) this.broadcast.emit("Disconnect");
+    clients--;
+  }
+}
+
+function SendOffer(offer) {
+  this.broadcast.emit("BackOffer", offer);
+}
+
+function SendAnswer(data) {
+  this.broadcast.emit("BackAnswer", data);
+}
+
+http.listen(port, () => console.log(`Active on ${port} port`));
