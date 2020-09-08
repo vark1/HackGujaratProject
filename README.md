@@ -1,4 +1,4 @@
-# HackGujarat project
+# HackGujarat project (CodeConnect)
 ### [Vedio Demo Link](https://drive.google.com/file/d/12t1a0GzoPDDrfjNfhFhvsdtAAwHlCOTy/view?usp=sharing)
 
 
