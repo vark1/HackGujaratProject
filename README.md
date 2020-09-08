@@ -1,4 +1,4 @@
-# Hackjaipur project
+# HackGujarat project
 ### [Vedio Demo Link](https://drive.google.com/file/d/12t1a0GzoPDDrfjNfhFhvsdtAAwHlCOTy/view?usp=sharing)
 
 
