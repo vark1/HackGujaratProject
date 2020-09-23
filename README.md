@@ -1,13 +1,12 @@
-# HackGujarat project (CodeConnect)
+# CodeConnect
+
 ### -----------------------[Vedio Demo Link](https://drive.google.com/file/d/12t1a0GzoPDDrfjNfhFhvsdtAAwHlCOTy/view?usp=sharing)-----------------------
+
 <br><br><br>
 
 ### Connect through code in REAL-TIME .Resolve Problems like Remote teaching , Remote Interviews , Remote edditing at one stop.
 
 <img width="953" alt="Capture3" src="https://user-images.githubusercontent.com/46247882/92441272-8af21f00-f1cb-11ea-9b0c-eddfeead1bf1.PNG">
-
-
-
 
 ### The problem CodeConnect solves<br>
 
@@ -19,4 +18,3 @@ As the era of remote development is coming to life in this time of pandemic, so 
 
 3.Problem of Creating Multiple redundant versions
 Let’s say, a group of us friends have been given an assignment. We have to submit it in code. So I write a document and I assume it’s final and I send it. My friends on the other hand find out there are multiple errors, so I write a document again. This time is final. Now they figure out a better solution, so I change it again. It’s definitely the final_final_document. And they change it again
-
